@@ -1,11 +1,15 @@
 {
   "compilerOptions": {
     "outDir": "dist",
-    "module": "es2015",
+    "module": "es6",
+    "moduleResolution": "node",
     "target": "es5",
-    "lib": ["es6", "dom"],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "jsx": "react",
-    "declaration": true
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]

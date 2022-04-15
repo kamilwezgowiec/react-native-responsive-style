@@ -1,8 +1,7 @@
 {
-  "name": "@i514x/native-media-query",
+  "name": "native-media-query",
   "version": "1.0.0",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/index.mjs",
   "repository": "git@github.com:kamilwezgowiec/native-media-query.git",
   "author": "Kamil Wezgowiec",
   "license": "MIT",
@@ -14,7 +13,15 @@
     "/dist"
   ],
   "devDependencies": {
+    "@types/css-mediaquery": "^0.1.1",
+    "@types/react": "^18.0.3",
     "@types/react-native": "^0.67.4",
     "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "css-mediaquery": "^0.1.2",
+    "react": "^18.0.0",
+    "react-native": "^0.68.1",
+    "react-native-web": "^0.17.7"
   }
 }
