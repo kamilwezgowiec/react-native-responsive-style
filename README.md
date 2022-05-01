@@ -1,8 +1,8 @@
-# Native Media Query
+# React Native Responsive Style
 
-## What is Native Media Query
+## What is React Native Responsive Style
 
-Native Media Query is a TypeScript-first responsive stylesheet compatible with React Native, React Native Web and Next.js (including SSR).
+React Native Responsive Style is a TypeScript-first responsive stylesheet compatible with React Native, React Native Web and Next.js (including SSR).
 
 Inspired and based on [react-native-media-query](https://github.com/kasinskas/react-native-media-query), this package removes the requirement of using
 a 2nd prop (dataSet) when applying styles to components. In addition, this allows us now to pass arrays of styles into components like in the [example](#usage).
@@ -12,13 +12,13 @@ a 2nd prop (dataSet) when applying styles to components. In addition, this allow
 ### npm
 
 ```
-npm install native-media-query
+npm install react-native-responsive-style
 ```
 
 ### yarn
 
 ```
-yarn add native-media-query
+yarn add react-native-responsive-style
 ```
 
 ## Usage
@@ -28,7 +28,7 @@ yarn add native-media-query
 ```ts
 import React, { useState } from "react";
 import { Pressable, Text, View } from "react-native";
-import { StyleSheet } from "native-media-query";
+import { StyleSheet } from "react-native-responsive-style";
 
 const styles = StyleSheet.create({
   container: {
@@ -88,7 +88,7 @@ In order to have server side rendering enabled, we need to use `<StyleSheet.rend
 
 ```ts
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import { StyleSheet } from "native-media-query";
+import { StyleSheet } from "react-native-responsive-style";
 
 class MyDocument extends Document {
   render() {

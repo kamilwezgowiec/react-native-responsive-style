@@ -26,7 +26,6 @@ export namespace StyleSheet {
             filteredProperties = { ...filteredProperties, ...value };
           }
 
-          console.log(propertyName, value, isMatchingMediaQuery);
           continue;
         }
 

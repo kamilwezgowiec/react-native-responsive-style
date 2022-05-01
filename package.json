@@ -1,8 +1,8 @@
 {
-  "name": "native-media-query",
+  "name": "react-native-responsive-style",
   "version": "1.0.0",
-  "main": "dist/index.mjs",
-  "repository": "git@github.com:kamilwezgowiec/native-media-query.git",
+  "main": "dist/index.js",
+  "repository": "git@github.com:kamilwezgowiec/react-native-responsive-style.git",
   "author": "Kamil Wezgowiec",
   "license": "MIT",
   "private": false,
