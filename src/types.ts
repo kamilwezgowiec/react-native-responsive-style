@@ -1,7 +1,6 @@
-import React from "react";
 import type { ViewStyle, TextStyle, ImageStyle } from "react-native";
 
-type WithMediaQueries<Type> = Type extends any
+export type WithMediaQueries<Type> = Type extends any
   ? Type & { [key: `@media${string}`]: Type }
   : never;
 
