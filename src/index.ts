@@ -1,1 +1,1 @@
-export { StyleSheet } from "./styleSheet";
+export * from "./styleSheet";

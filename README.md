@@ -23,14 +23,14 @@ yarn add react-native-responsive-style
 
 ## Usage
 
-### index.tsx
+### StyleSheet
 
 ```ts
 import React, { useState } from "react";
 import { Pressable, Text, View } from "react-native";
-import { StyleSheet } from "react-native-responsive-style";
+import { styleSheet } from "react-native-responsive-style";
 
-const styles = StyleSheet.create({
+const styles = styleSheet({
   container: {
     width: "100%",
     backgroundColor: "brown",
@@ -80,22 +80,46 @@ export default function App() {
 }
 ```
 
+### Inline styles
+
+```ts
+import React from "react";
+import { Text, View } from "react-native";
+import { style } from "react-native-responsive-style";
+
+export default function App() {
+  const textStyles = style({
+    color: "blue",
+
+    "@media (min-width: 550px)": {
+      color: "orange",
+    },
+  });
+
+  return (
+    <View>
+      <Text style={textStyles}>Hi there ;)</Text>
+    </View>
+  );
+}
+```
+
 ## SSR with Next.js
 
-In order to have server side rendering enabled, we need to use `<StyleSheet.renderSsr />` by rendering media queries in our website's `<head>` section.
+In order to have server side rendering enabled, we need to use `<RenderSsr />` by rendering media queries in our website's `<head>` section.
 
 ### \_document.tsx
 
 ```ts
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import { StyleSheet } from "react-native-responsive-style";
+import { RenderSsr } from "react-native-responsive-style";
 
 class MyDocument extends Document {
   render() {
     return (
       <Html>
         <Head>
-          <StyleSheet.renderSsr />
+          <RenderSsr />
         </Head>
         <body>
           <Main />
