@@ -1,6 +1,18 @@
 # React Native Responsive Style
 
-## What is React Native Responsive Style
+## Table of contents
+
+- [Introduction](#introduction)
+- [Installation](#installation)
+  - [npm](#npm)
+  - [yarn](#yarn)
+- [Usage](#usage)
+  - [Style sheet](#style-sheet)
+  - [Inline styles](#inline-styles)
+  - [SSR with Next.js](#ssr-with-nextjs)
+- [Changelog](#changelog)
+
+## Introduction
 
 React Native Responsive Style is a TypeScript-first responsive stylesheet compatible with React Native, React Native Web and Next.js (including SSR).
 
@@ -23,7 +35,7 @@ yarn add react-native-responsive-style
 
 ## Usage
 
-### StyleSheet
+### Style sheet
 
 ```ts
 import React, { useState } from "react";
@@ -104,11 +116,9 @@ export default function App() {
 }
 ```
 
-## SSR with Next.js
+### SSR with Next.js
 
 In order to have server side rendering enabled, we need to use `<RenderSsr />` by rendering media queries in our website's `<head>` section.
-
-### \_document.tsx
 
 ```ts
 import Document, { Html, Head, Main, NextScript } from "next/document";
@@ -132,3 +142,18 @@ class MyDocument extends Document {
 
 export default MyDocument;
 ```
+
+## Changelog
+
+### v1.1.1
+
+- fixed types
+- minified JS bundle
+
+### v1.1.0
+
+- add support for inlined responsive styles
+
+### v1.0.0
+
+- initial release
