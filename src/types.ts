@@ -34,4 +34,5 @@ type Styles<
     | (K extends keyof BaseStyles ? never : undefined);
 };
 
-export type CreateReturn<T> = { [K in keyof T]: Styles<T[K]> };
+export type StyleReturn<T> = Styles<T>;
+export type StyleSheetReturn<T> = { [K in keyof T]: Styles<T[K]> };
