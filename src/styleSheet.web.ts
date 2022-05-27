@@ -5,8 +5,9 @@ import { hash, toKebabCase, isClient, isMediaQuery } from "./utils";
 import type {
   ComponentStyle,
   NamedStyles,
-  CreateReturn,
   WithMediaQueries,
+  StyleReturn,
+  StyleSheetReturn,
 } from "./types";
 
 export namespace Style {
@@ -76,7 +77,7 @@ export namespace Style {
       }
     }
 
-    return { ...filteredProperties, ...ids };
+    return { ...filteredProperties, ...ids } as StyleReturn<T>;
   }
 
   export function styleSheet<T extends NamedStyles<T> | NamedStyles<any>>(
@@ -88,7 +89,7 @@ export namespace Style {
       baseStyles[name] = style(properties);
     }
 
-    return baseStyles as CreateReturn<T>;
+    return baseStyles as StyleSheetReturn<T>;
   }
 }
 

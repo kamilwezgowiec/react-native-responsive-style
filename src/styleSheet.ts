@@ -3,8 +3,9 @@ import mediaQuery from "css-mediaquery";
 import type {
   ComponentStyle,
   NamedStyles,
-  CreateReturn,
   WithMediaQueries,
+  StyleReturn,
+  StyleSheetReturn,
 } from "./types";
 import { isMediaQuery } from "./utils";
 
@@ -34,7 +35,7 @@ export namespace Style {
       filteredProperties[propertyName] = value;
     }
 
-    return { ...filteredProperties, ...ids };
+    return { ...filteredProperties, ...ids } as StyleReturn<T>;
   }
 
   export function styleSheet<T extends NamedStyles<T> | NamedStyles<any>>(
@@ -46,7 +47,7 @@ export namespace Style {
       baseStyles[name] = style(properties);
     }
 
-    return baseStyles as CreateReturn<T>;
+    return baseStyles as StyleSheetReturn<T>;
   }
 }
 
